@@ -1,0 +1,37 @@
+#Program untuk menghitung beban listrik di rumah Andi
+#by Kevin Alvaro Adianto
+
+print("==========Program untuk menghitung beban listrik==========")
+
+#minta inputan
+v=float(input("Masukkan Voltase dari PLN :"))
+a=float(input("Masukkan Ampere dari PLN :"))
+
+#watt total dari pln
+w=v*a
+
+#watt masuk ke rumah andi
+wbersih=95/100*w
+
+#Kamar
+kamar=30/100*wbersih
+
+#dapur
+dapur=50/100*wbersih
+
+#kulkas dan dispenser
+kulkas=40/100*dapur
+
+#pemanas dan oven
+oven=dapur-kulkas
+
+#lain-lain
+lain=wbersih-kamar-dapur
+
+print("Watt dari PLN adalah:",w)
+print("Watt Bersih PLN adalah:",wbersih)
+print("Watt untuk kamar:",kamar)
+print("Watt untuk dapur:",dapur)
+print("Watt untuk kulkas dan dispenser:",kulkas)
+print("Watt untuk pemanas dan oven:",oven)
+print("Watt lain-lain:",lain)
